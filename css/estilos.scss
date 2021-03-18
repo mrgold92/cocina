@@ -1,0 +1,206 @@
+$popins: 'Poppins',
+sans-serif;
+$bodoni: 'Bodoni Moda',
+sans-serif;
+$blanco: #FFFFFF;
+$marron: #B45008;
+$marron-letra: #B95C19;
+$naranja: #E4B65E;
+$naranja-letra: #E8BF65;
+$palo: #f7f8f1d5;
+$marron-esp: #833E28;
+$fondo-esp: #FFFFF9;
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+/* HOME */
+
+.fondo {
+  height: 100vh;
+  overflow: hidden;
+  background: url('/img/fondo.jpg') center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .recuadro {
+    background: $palo;
+    padding: 50px;
+    text-align: center;
+    line-height: 2px;
+    width: 400px;
+
+    h3 {
+      font-family: $popins;
+      font-weight: 600;
+      font-size: 1.2rem;
+
+    }
+
+    h1 {
+      font-family: $bodoni;
+      color: $marron-letra;
+      font-weight: 700;
+      font-size: 4rem;
+      font-style: italic;
+    }
+  }
+
+}
+
+/* ABOUT */
+
+.about {
+  height: 60vh;
+  margin: 0;
+  padding: 30px 30px;
+  background: $marron;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+
+  .col-iz {
+    width: 50%;
+    padding: 0 40px;
+
+    h1 {
+      font-size: 3rem;
+      font-family: $bodoni;
+      font-style: italic;
+      color: #E4B65E;
+    }
+
+    p {
+      color: $blanco;
+      font-family: $popins;
+    }
+  }
+
+  .col-der {
+    width: 50%;
+    height: auto;
+
+    .img {
+      display: grid;
+      height: auto;
+      grid-template-columns: 385px 265px;
+      gap: 6px 6px;
+      grid-template-areas: "col-1 col-2""col-1 col-3";
+
+      .col-1 {
+        grid-area: col-1;
+      }
+
+      .col-2 {
+        grid-area: col-2;
+      }
+
+      .col-3 {
+        grid-area: col-3;
+      }
+
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+
+
+  }
+}
+
+/* MENÚ */
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  background: $fondo-esp;
+  padding: 20px;
+
+  .menu-de {
+    img {
+      height: 100%;
+      width: 84.6%;
+    }
+  }
+
+  .menu-iz {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+
+    h3 {
+      color: $marron-esp;
+      font-family: $bodoni;
+      font-size: 2rem;
+      font-style: italic;
+    }
+
+    .menu-especialidades {
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 12px 12px;
+      line-height: 20px;
+
+      .menu-col {
+
+        span {
+          color: $naranja-letra;
+          font-weight: 700;
+          font-family: $popins;
+          text-transform: uppercase;
+          font-size: 13.5pt;
+        }
+
+        p {
+          font-family: $popins;
+          font-size: 12pt;
+
+        }
+      }
+    }
+  }
+}
+
+/* FINAL */
+
+.final {
+  background-color: $marron;
+  padding: 60px 40px;
+  text-align: center;
+
+  h1 {
+    color: $naranja-letra;
+    font-family: $bodoni;
+    font-size: 3rem;
+    font-style: oblique;
+  }
+
+  p {
+    color: $blanco;
+    font-family: $popins;
+  }
+}
+
+/* FOOTER */
+
+footer {
+  background-color: $fondo-esp;
+  text-align: center;
+  font-family: $popins;
+  font-size: .7rem;
+  font-weight: 700;
+}
